@@ -1,0 +1,158 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="1000dp"
+    android:background="@color/blanco"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginVertical="50dp"
+        android:text="Seleccione el motivo por el que acudió a la Oficina Atención a Estudiantes:"
+        android:textAlignment="center"
+        android:textColor="@color/color"
+        android:textSize="47dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="200dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/certificado"
+            android:layout_width="222dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Certificados"
+            android:textSize="20dp"
+            android:textColor="@color/blanco" />
+
+        <Button
+            android:id="@+id/ingreso"
+            android:layout_width="430dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Ingreso especial, Cambio de carrera"
+            android:textSize="20dp"
+            android:textColor="@color/blanco" />
+        <Button
+            android:id="@+id/matricula"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Matrícula"
+            android:textSize="20dp"
+            android:textColor="@color/blanco" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="800dp"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="310dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reconocimiento"
+            android:layout_width="222dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Reconocimiento de Estudio"
+            android:textSize="20dp"
+            android:textColor="@color/blanco" />
+        <Button
+            android:id="@+id/sansiones"
+            android:layout_width="430dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Sanciones Académicas / Tribunal de Mérito"
+            android:textSize="20dp"
+            android:textColor="@color/blanco" />
+        <Button
+            android:id="@+id/solicitud"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Solicitud de Clave y/o perfil"
+            android:textSize="20dp"
+            android:textColor="@color/blanco" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="420dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tne"
+            android:layout_width="222dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Tarjeta Nacional Estudiantil (TNE)"
+            android:textColor="@color/blanco"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/retiro"
+            android:layout_width="430dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Retiro Parcial / Inscripción Extemporánea"
+            android:textSize="20dp"
+            android:textColor="@color/blanco" />
+        <Button
+            android:id="@+id/otras"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_alignBaseline="@+id/textotime4"
+            android:background="@drawable/buttonstylevolver"
+            android:text="Otras Solicitudes"
+            android:textSize="20dp"
+            android:textColor="@color/blanco" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textotime4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/color"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="116dp" />
+
+
+</RelativeLayout>

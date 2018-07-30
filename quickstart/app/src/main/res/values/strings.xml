@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Quickstart</string>
+    <string name="primero"><![CDATA[<b>Seleccione el motivo por el que acudió a la Oficina Atención a Estudiantes</b>]]></string>
+    <string name="pregunta1"><![CDATA[<b>El tiempo que esperé para ser atendido fue razonable</b>]]></string>
+    <string name="pregunta2"><![CDATA[<b>El personal de la Oficina de Atención de Estudiantes demostró dominio para atender mi solicitud</b>]]></string>
+    <string name="pregunta3"><![CDATA[<b>El trato que recibí por parte del personal fue grato y cordial</b>]]></string>
+    <string name="cuarto"><![CDATA[<b>Pude resolver la situación por la que acudí a la Oficina de Atención de Estudiantes</b>]]></string>
+    <string name="pregunta4"><![CDATA[<b>Califique de 1 a 7 la atención prestada por la Oficina de Atención de Estudiantes</b>]]></string>
+    <string name="imagen2"><b>Totalmente\nde Acuerdo</b></string>
+    <string name="imagen3"><b>\tDe\nAcuerdo</b></string>
+    <string name="imagen4"><b>Medianamente\n\tde Acuerdo</b></string>
+    <string name="imagen5"><b>\t\tEn\nDesacuerdo</b></string>
+    <string name="imagen6"><b>Totalmente\ten\n\tDesacuerdo</b></string>
+
+
+</resources>
