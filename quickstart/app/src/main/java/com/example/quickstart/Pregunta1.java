@@ -109,8 +109,8 @@ public class Pregunta1 extends AppCompatActivity {
         pruebaa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                datos.getOpciones2().clear();
                 datos.getOpciones().clear();
+                datos.getOpciones5().clear();
                 Intent myintent = new Intent(getApplicationContext(),primero.class);
                 startActivity(myintent);
             }

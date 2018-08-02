@@ -17,7 +17,7 @@ import android.widget.TextView;
 import java.util.Locale;
 
 public class PrincipalActivity extends AppCompatActivity {
-    private static final long START_TIME_IN_MILLIS = 60000;
+    private static final long START_TIME_IN_MILLIS = 30000;
     //primero timer;
     LinearLayout l1;
     GuardarDatos datos;

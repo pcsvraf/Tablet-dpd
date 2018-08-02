@@ -43,10 +43,10 @@ public class primero extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primero);
         //instanciación global
-        datos = GuardarDatos.instancia;
-        final ArrayList<String> opcion5 = datos.getOpciones5();
         txt = (TextView) findViewById(R.id.textView4);
         BOTON_RESPUESTAS = (Button) findViewById(R.id.BTNsiguiente5);
+        datos = GuardarDatos.instancia;
+        final ArrayList<String> opcion5 = datos.getOpciones5();
         texto = (TextView) findViewById(R.id.textotime4);
         boton = (Button)findViewById(R.id.volver);
         uptodown = AnimationUtils.loadAnimation(this,R.anim.uptodown);

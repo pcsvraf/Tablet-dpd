@@ -13,6 +13,14 @@ public class GuardarDatos {
 
     //datos
 
+    private ArrayList<String> opcion5 = new ArrayList<String>();
+
+    //obtener datos
+
+    public ArrayList<String> getOpciones5(){
+        return opcion5;
+    }
+
     private ArrayList<String> opcion1 = new ArrayList<String>();
     
     //obtener datos
@@ -28,14 +36,6 @@ public class GuardarDatos {
     }
 
     private ArrayList<String> opcion3 = new ArrayList<String>();
-
-    //obtener datos
-    public ArrayList<String> getOpciones5(){
-        return opcion5;
-    }
-
-
-    private ArrayList<String> opcion5 = new ArrayList<String>();
 
     //obtener datos
     public ArrayList<String> getOpciones3(){
