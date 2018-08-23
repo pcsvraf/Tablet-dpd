@@ -4,10 +4,13 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.annotation.RequiresApi;
@@ -26,6 +29,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -35,6 +41,7 @@ public class Pregunta1 extends AppCompatActivity {
     String seleccionado;
     TextView textView, textView2;
     TextView txt;
+    DatabaseReference databaseReference;
 
     TextView imagen1,imagen2,imagen3,imagen4,imagen5;
 
@@ -49,6 +56,7 @@ public class Pregunta1 extends AppCompatActivity {
         imagen3 = (TextView) findViewById(R.id.imagen3);
         imagen4 = (TextView) findViewById(R.id.imagen4);
         imagen5 = (TextView) findViewById(R.id.imagen5);
+        databaseReference= FirebaseDatabase.getInstance().getReference();
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#006064")));
         txt.setText(Html.fromHtml(getResources().getString(R.string.pregunta1)));
 
@@ -60,6 +68,10 @@ public class Pregunta1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 seleccionado = imagen1.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Segundo").setValue(seleccionado);
+                }
                 datos.getOpciones().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta2.class);
                 startActivity(myintent);
@@ -70,6 +82,10 @@ public class Pregunta1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 seleccionado = imagen2.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Segundo").setValue(seleccionado);
+                }
                 datos.getOpciones().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta2.class);
                 startActivity(myintent);
@@ -80,6 +96,10 @@ public class Pregunta1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 seleccionado = imagen3.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Segundo").setValue(seleccionado);
+                }
                 datos.getOpciones().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta2.class);
                 startActivity(myintent);
@@ -90,6 +110,10 @@ public class Pregunta1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 seleccionado = imagen4.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Segundo").setValue(seleccionado);
+                }
                 datos.getOpciones().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta2.class);
                 startActivity(myintent);
@@ -100,6 +124,10 @@ public class Pregunta1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 seleccionado = imagen5.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Segundo").setValue(seleccionado);
+                }
                 datos.getOpciones().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta2.class);
                 startActivity(myintent);
@@ -117,6 +145,11 @@ public class Pregunta1 extends AppCompatActivity {
         });
     }
 
-
+    private boolean isDeviceOnline() {
+        ConnectivityManager connMgr =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        return (networkInfo != null && networkInfo.isConnected());
+    }
 
 }

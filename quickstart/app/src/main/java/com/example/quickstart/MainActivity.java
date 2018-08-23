@@ -16,6 +16,8 @@ import com.google.api.client.util.ExponentialBackOff;
 import com.google.api.services.sheets.v4.SheetsScopes;
 
 import com.google.api.services.sheets.v4.model.*;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 import android.Manifest;
@@ -74,6 +76,7 @@ import pub.devrel.easypermissions.EasyPermissions;
 public class MainActivity extends AppCompatActivity
         implements EasyPermissions.PermissionCallbacks {
     public static  int id = 1;
+    public static int contador=1;
     PrincipalActivity timee;
     GuardarDatos datos;
     Animation uptodown,downtoup;
@@ -84,7 +87,7 @@ public class MainActivity extends AppCompatActivity
     TextView texto, imagen1,imagen2,imagen3,imagen4,imagen5,imagen6,imagen7,txt;
     String seleccionado;
     RadioButton radio1,radio2,radio3,radio4,radio5,radio6,radio7;
-
+    DatabaseReference databaseReference;
 
     static final int REQUEST_ACCOUNT_PICKER = 1000;
     static final int REQUEST_AUTHORIZATION = 1001;
@@ -122,6 +125,7 @@ public class MainActivity extends AppCompatActivity
         radio5 = (RadioButton)findViewById(R.id.radioButton20);
         radio6 = (RadioButton)findViewById(R.id.radioButton21);
         radio7 = (RadioButton)findViewById(R.id.radioButton22);
+        databaseReference= FirebaseDatabase.getInstance().getReference();
 
         //int nose = 0;
 
@@ -139,31 +143,59 @@ public class MainActivity extends AppCompatActivity
                 if(radio1.isChecked())
                 {
                     seleccionado = radio1.getText().toString();
+                    if (! isDeviceOnline()) {
+                        Encuesta p1 = new Encuesta(seleccionado);
+                        databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                    }
                 }
                 else if(radio2.isChecked())
                 {
                     seleccionado = radio2.getText().toString();
+                    if (! isDeviceOnline()) {
+                        Encuesta p1 = new Encuesta(seleccionado);
+                        databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                    }
                 }
                 else if(radio3.isChecked())
                 {
                     datos.getOpciones4().clear();
                     seleccionado = radio3.getText().toString();
+                    if (! isDeviceOnline()) {
+                        Encuesta p1 = new Encuesta(seleccionado);
+                        databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                    }
                 }
                 else if(radio4.isChecked())
                 {
                     seleccionado = radio4.getText().toString();
+                    if (! isDeviceOnline()) {
+                        Encuesta p1 = new Encuesta(seleccionado);
+                        databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                    }
                 }
                 else if(radio5.isChecked())
                 {
                     seleccionado = radio5.getText().toString();
+                    if (! isDeviceOnline()) {
+                        Encuesta p1 = new Encuesta(seleccionado);
+                        databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                    }
                 }
                 else if(radio6.isChecked())
                 {
                     seleccionado = radio6.getText().toString();
+                    if (! isDeviceOnline()) {
+                        Encuesta p1 = new Encuesta(seleccionado);
+                        databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                    }
                 }
                 else if(radio7.isChecked())
                 {
                     seleccionado = radio7.getText().toString();
+                    if (! isDeviceOnline()) {
+                        Encuesta p1 = new Encuesta(seleccionado);
+                        databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                    }
                 }
             }
         });
@@ -183,9 +215,21 @@ public class MainActivity extends AppCompatActivity
         BOTON_RESPUESTAS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getResultsFromApi();
 
                 BOTON_RESPUESTAS.setEnabled(true);
+                if (! isDeviceOnline()) {
+                    if (radio1.isChecked() || radio2.isChecked() || radio3.isChecked() || radio4.isChecked() || radio5.isChecked() || radio6.isChecked() || radio7.isChecked()) {
+                        Intent myintent = new Intent(getApplicationContext(), FinalActivity.class);
+                        startActivity(myintent);
+                        contador += 1;
+                    } else {
+                        texto.setText("Porfavor, seleccione una respuesta!.");
+                    }
+                }
+                else{
+                    getResultsFromApi();
+                    //contador += 1;
+                }
 
             }
         });
@@ -196,6 +240,10 @@ public class MainActivity extends AppCompatActivity
 
                 radio1.setChecked(true);
                     seleccionado = imagen1.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                }
             }
         });
 
@@ -204,6 +252,10 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 radio2.setChecked(true);
                     seleccionado = imagen2.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                }
                 }
         });
 
@@ -212,6 +264,10 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 radio3.setChecked(true);
                     seleccionado = imagen3.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                }
             }
         });
 
@@ -220,6 +276,10 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                     radio4.setChecked(true);
                     seleccionado = imagen4.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                }
             }
         });
 
@@ -228,6 +288,10 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                     radio5.setChecked(true);
                     seleccionado = imagen5.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                }
             }
         });
 
@@ -235,6 +299,10 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 seleccionado = imagen6.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                }
                 radio6.setChecked(true);
             }
         });
@@ -243,6 +311,10 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 seleccionado = imagen7.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Quinto").setValue(seleccionado);
+                }
                 radio7.setChecked(true);
             }
         });
@@ -480,7 +552,6 @@ public class MainActivity extends AppCompatActivity
                     .setApplicationName("encuestaTuOpinionDF")
                     .build();
         }
-
 
 
         /**

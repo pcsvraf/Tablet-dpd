@@ -1,9 +1,12 @@
 package com.example.quickstart;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
@@ -14,6 +17,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -21,6 +25,8 @@ import android.widget.Toast;
 
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 import com.google.api.client.util.ExponentialBackOff;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,6 +43,7 @@ public class primero extends AppCompatActivity{
     ProgressDialog mProgress;
     TextView texto,txt;
     String seleccionado;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,21 +73,33 @@ public class primero extends AppCompatActivity{
         boton7 = (Button)findViewById(R.id.tne);
         boton8 = (Button)findViewById(R.id.retiro);
         boton9 = (Button)findViewById(R.id.otras);
+        databaseReference= FirebaseDatabase.getInstance().getReference();
         int nose = 0;
 
         boton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 seleccionado = boton1.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
+
             }
         });
         boton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 seleccionado = boton2.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
@@ -90,15 +109,26 @@ public class primero extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 seleccionado = boton3.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
+
             }
         });
         boton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 seleccionado = boton4.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
@@ -108,6 +138,11 @@ public class primero extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 seleccionado = boton5.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
@@ -117,6 +152,11 @@ public class primero extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 seleccionado = boton6.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
@@ -126,6 +166,11 @@ public class primero extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 seleccionado = boton7.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
@@ -135,6 +180,11 @@ public class primero extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 seleccionado = boton8.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
@@ -144,10 +194,23 @@ public class primero extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 seleccionado = boton9.getText().toString();
+                if (! isDeviceOnline()) {
+                    Encuesta p1 = new Encuesta(seleccionado);
+                    //String id=databaseReference.push().getKey();
+                    databaseReference.child(Integer.toString(MainActivity.contador)).child("Primero").setValue(seleccionado);
+                }
                 datos.getOpciones5().add(seleccionado);
                 Intent myintent = new Intent(getApplicationContext(),Pregunta1.class);
                 startActivity(myintent);
             }
         });
 }
+
+    private boolean isDeviceOnline() {
+        ConnectivityManager connMgr =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        return (networkInfo != null && networkInfo.isConnected());
+    }
+
 }
