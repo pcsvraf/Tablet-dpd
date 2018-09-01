@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="1000dp"
+    android:layout_height="3000dp"
     android:background="@color/blanco"
     tools:context=".MainActivity">
 
@@ -27,41 +27,38 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView4"
         android:layout_centerHorizontal="true"
-        android:layout_marginVertical="200dp"
+        android:layout_marginVertical="30dp"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/certificado"
-            android:layout_width="222dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:background="@drawable/buttonstylevolver"
+        <TextView
+            android:id="@+id/certificados"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="150dp"
+            android:background="@drawable/certificados"
             android:text="Certificados"
-            android:textSize="20dp"
-            android:textColor="@color/blanco" />
+            android:textSize="0dp" />
 
-        <Button
+        <TextView
             android:id="@+id/ingreso"
-            android:layout_width="430dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:layout_marginRight="100dp"
-            android:layout_marginLeft="100dp"
-            android:background="@drawable/buttonstylevolver"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="150dp"
+            android:background="@drawable/ingreso"
             android:text="Ingreso especial, Cambio de carrera"
-            android:textSize="20dp"
-            android:textColor="@color/blanco" />
-        <Button
+            android:textSize="0dp" />
+
+        <TextView
             android:id="@+id/matricula"
-            android:layout_width="220dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:background="@drawable/buttonstylevolver"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="150dp"
+            android:background="@drawable/matricula"
             android:text="Matrícula"
-            android:textSize="20dp"
-            android:textColor="@color/blanco" />
-
-
+            android:textSize="0dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -70,78 +67,78 @@
         android:layout_height="800dp"
         android:layout_alignTop="@+id/textView4"
         android:layout_centerHorizontal="true"
-        android:layout_marginVertical="310dp"
+        android:layout_marginVertical="180dp"
         android:orientation="horizontal">
 
-        <Button
+        <TextView
             android:id="@+id/reconocimiento"
-            android:layout_width="222dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:background="@drawable/buttonstylevolver"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="150dp"
+            android:background="@drawable/reconocimiento"
             android:text="Reconocimiento de Estudio"
-            android:textSize="20dp"
-            android:textColor="@color/blanco" />
-        <Button
-            android:id="@+id/sansiones"
-            android:layout_width="430dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:layout_marginRight="100dp"
-            android:layout_marginLeft="100dp"
-            android:background="@drawable/buttonstylevolver"
+            android:textSize="0dp" />
+
+        <TextView
+            android:id="@+id/sanciones"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="150dp"
+            android:background="@drawable/sanciones"
             android:text="Sanciones Académicas / Tribunal de Mérito"
-            android:textSize="20dp"
-            android:textColor="@color/blanco" />
-        <Button
+            android:textSize="0dp" />
+
+        <TextView
             android:id="@+id/solicitud"
-            android:layout_width="220dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:background="@drawable/buttonstylevolver"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="150dp"
+            android:background="@drawable/solicitud"
             android:text="Solicitud de Clave y/o perfil"
-            android:textSize="20dp"
-            android:textColor="@color/blanco" />
+            android:textSize="0dp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="2200dp"
         android:layout_alignTop="@+id/textView4"
         android:layout_centerHorizontal="true"
-        android:layout_marginVertical="420dp"
+        android:layout_marginVertical="200dp"
         android:orientation="horizontal">
 
-        <Button
+        <TextView
             android:id="@+id/tne"
-            android:layout_width="222dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:background="@drawable/buttonstylevolver"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="290dp"
+            android:background="@drawable/tne"
             android:text="Tarjeta Nacional Estudiantil (TNE)"
-            android:textColor="@color/blanco"
-            android:textSize="20dp" />
-        <Button
+            android:textSize="0dp" />
+
+        <TextView
             android:id="@+id/retiro"
-            android:layout_width="430dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:layout_marginRight="100dp"
-            android:layout_marginLeft="100dp"
-            android:background="@drawable/buttonstylevolver"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="290dp"
+            android:background="@drawable/retiro"
             android:text="Retiro Parcial / Inscripción Extemporánea"
-            android:textSize="20dp"
-            android:textColor="@color/blanco" />
-        <Button
+            android:textSize="0dp" />
+
+        <TextView
             android:id="@+id/otras"
-            android:layout_width="220dp"
-            android:layout_height="80dp"
-            android:layout_alignBaseline="@+id/textotime4"
-            android:background="@drawable/buttonstylevolver"
+            android:layout_width="380px"
+            android:layout_height="66px"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="290dp"
+            android:background="@drawable/otras"
             android:text="Otras Solicitudes"
-            android:textSize="20dp"
-            android:textColor="@color/blanco" />
+            android:textSize="0dp" />
 
     </LinearLayout>
     <TextView

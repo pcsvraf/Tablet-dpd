@@ -52,6 +52,7 @@ public class PrincipalActivity extends AppCompatActivity {
                 datos.getOpciones3().clear();
                 datos.getOpciones4().clear();
                 datos.getOpciones5().clear();
+                datos.getOpciones6().clear();
                 Intent myintent = new Intent(PrincipalActivity.this,primero.class);
                 startActivity(myintent);
             }

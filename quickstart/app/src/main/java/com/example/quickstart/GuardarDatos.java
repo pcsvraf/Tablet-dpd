@@ -17,28 +17,28 @@ public class GuardarDatos {
 
     //obtener datos
 
-    public ArrayList<String> getOpciones5(){
+    public ArrayList<String> getOpciones5() {
         return opcion5;
     }
 
     private ArrayList<String> opcion1 = new ArrayList<String>();
-    
+
     //obtener datos
-    public ArrayList<String> getOpciones(){
+    public ArrayList<String> getOpciones() {
         return opcion1;
     }
 
     private ArrayList<String> opcion2 = new ArrayList<String>();
 
     //obtener datos
-    public ArrayList<String> getOpciones2(){
+    public ArrayList<String> getOpciones2() {
         return opcion2;
     }
 
     private ArrayList<String> opcion3 = new ArrayList<String>();
 
     //obtener datos
-    public ArrayList<String> getOpciones3(){
+    public ArrayList<String> getOpciones3() {
         return opcion3;
     }
 
@@ -46,8 +46,14 @@ public class GuardarDatos {
     private ArrayList<String> opcion4 = new ArrayList<String>();
 
     //obtener datos
-    public ArrayList<String> getOpciones4(){
+    public ArrayList<String> getOpciones4() {
         return opcion4;
     }
 
+    private ArrayList<String> opcion6 = new ArrayList<String>();
+
+    //obtener datos
+    public ArrayList<String> getOpciones6() {
+        return opcion6;
     }
+}

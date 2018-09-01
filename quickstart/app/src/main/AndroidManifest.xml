@@ -9,12 +9,13 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
-        android:label="Calidad de Servicio"
+        android:label="Calidad de Servicio DPD"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         <activity android:name=".primero" />
         <activity android:name=".Pregunta1" />
         <activity android:name=".Pregunta2" />
         <activity android:name=".Pregunta3" />
+        <activity android:name=".cuarto"/>
         <activity android:name=".MainActivity"/>
 
         <activity
