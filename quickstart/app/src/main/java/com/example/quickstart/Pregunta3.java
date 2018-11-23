@@ -128,6 +128,7 @@ public class Pregunta3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 datos.getOpciones3().clear();
+                datos.getOpciones2().clear();
                 Intent myintent = new Intent(getApplicationContext(),Pregunta2.class);
                 startActivity(myintent);
             }

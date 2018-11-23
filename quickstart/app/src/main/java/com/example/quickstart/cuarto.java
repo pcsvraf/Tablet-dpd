@@ -128,6 +128,7 @@ public class cuarto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 datos.getOpciones6().clear();
+                datos.getOpciones3().clear();
                 Intent myintent = new Intent(getApplicationContext(),Pregunta3.class);
                 startActivity(myintent);
             }
